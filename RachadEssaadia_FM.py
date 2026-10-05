@@ -75,3 +75,31 @@ plt.title("Comparaison des méthodes d'interpolation")
 plt.grid(True)
 plt.legend()
 plt.show()
+
+
+
+# 9. Erreur d'interpolation
+
+
+erreur_l = np.abs(y_f - y_l)
+erreur_n = np.abs(y_f - y_n)
+erreur_h = np.abs(y_f - y_h)
+
+
+
+# 10. Graphique des erreurs
+
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(x, erreur_l, label="Erreur Lagrange")
+plt.plot(x, erreur_n, label="Erreur Newton")
+plt.plot(x, erreur_h, label="Erreur Hermite")
+
+plt.xlabel("x")
+plt.ylabel("Erreur absolue")
+plt.title("Erreur d'interpolation")
+
+plt.grid(True)
+plt.legend()
+plt.show()
